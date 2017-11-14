@@ -1,0 +1,13 @@
+*.log
+*.aux
+*.pdf
+*.out
+*.synctex
+*.md
+*.gz
+*.bbl
+*.blg
+*.dvi
+*.ps
+
+ProbabilisticModelPaper.synctex.gz(busy)
