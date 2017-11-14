@@ -1,7 +1,12 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
- 
-\title{The challenges of opening a new branch overseas}
+
+\usepackage[usenames,dvipsnames]{color}
+\newcommand{\todo}[1]
+  {{\scriptsize \textbf{\color{red} {#1}}}}
+  
+   
+\title{Challenges faced in the process of knowledge and culture transfer in an industrial environment}
 \author{Mauricio Soto}
 \date{Fall 2017}
  
@@ -12,28 +17,27 @@
 \end{titlepage}
 
 \begin{abstract}
-This is a simple paragraph at the beginning of the 
-document. A brief introduction about the main subject.
+I will write this later
 \end{abstract}
  
  
 \section{Introduction}
 
-The advantages that companies have by opening a branch overseas are constantly increasing.
+The advantages that enterprises have by opening a branch overseas are constantly increasing.
 Owning branches in different locations enables a pool of resources that enterprises would not be able
 to obtain otherwise, such as special talents, legal benefits and financial gain. However, 
 opening a branch overseas is usually accompanied by a set of challenges inherent to a process of this nature, such as 
 difficulties in communication among team members distributed in different locations, 
 cultural and language barriers, and transmitting the culture, mechanisms, and knowledge necessary for the 
 coworkers in the new branch to perform their tasks adequately. 
-This includes training in tools and standard procedures used by the enterprise, as well as the
+This knowledge comprises aspects such as: specific training in tools and standard procedures used by the enterprise, as well as the
 business logic required to understand the proper requirements and use of the product being built
 in the branch.
 
 In my experience, I have had the opportunity to work with very diverse contexts of knowledge and culture transfer in 
 an industrial environment. I will compare and contrast my experiences, with a slight emphasis on the 
 latest experience I had before joining the Phd program, in which a big well-known enterprise was 
-opening a new branch in Costa Rica and was starting to face the challenges that this process encompasses.  
+opening a new branch in Costa Rica and was starting to face the challenges this process encompasses.  
 
 
 
@@ -44,6 +48,8 @@ opening a new branch in Costa Rica and was starting to face the challenges that 
 
 
 \section{Institutional and distributed knowledge}
+
+\todo{Talk about some literature on distributed knowledge and how people learn here, also ask zack on literature on how people learn, with all the cognitive work he's been doing}
  
 Difficulties dealing with different locations: I have had experiences with development teams where the teams are distributed in 1, 2 and 3 different sites. I can talk about the difficulties this introduces to the process of development, specially difficulties with communication and synchronization efforts.
 
@@ -62,22 +68,21 @@ In the fall of 2013 I was offered a position in Experian, Credit Score Reporting
 I had never heard the name of this company in my life nor I fully understood what was the main product or service that 
 the company provided. 
 After the first introduction day, I came to learn that Experian was a well-known company worldwide with over 16,000
-employees and their business encompasses credit reporting but it also works with other products such as decision 
+employees and their business encompasses credit reporting but also other products such as decision 
 analytics, marketing assistance and identity theft. I also learned that we would be working mainly with a branch in 
 Costa Mesa, California, and a branch in Santiago, Chile. The branch in Costa Mesa was a well established branch, with 
-employees that had over 20 years working for the company. The Costa Rica branch was the latest addition to this growing 
+employees that had over 20 years working for the company. The Costa Rica branch (which I just joined) was the latest addition to this growing 
 community and I was the third employee in the identity theft field (the other two employees were hired a couple of 
 weeks before me). At this point Experian was starting a slow process of knowledge and culture transfer that comprises 
-challenges such as:
+challenges such as the following:
 \begin{itemize}
-  \item The fact that there is institutional knowledge, there is no one expert, but knowledge is spread out among a 
+  \item There is institutional knowledge that needs to be transfered to the new branch. This means there is not a single expert that 
+  knows the entirety of the knowledge needed, but knowledge is spread out among a 
 large number of different employees, and enough of this knowledge needs to be transmitted to the employees in the new 
-branch for them to be able to perform their work properly. 
-  \item The fact that the main business logic product, the concept of a "credit score", is not used or known in the 
-cultural context of the location of the new branch.
-  \item The differences in pace and knowledge between the team in the well established branch, where they have a lot of 
-  business knowledge because they have worked there for an extensive amount of time but their knowledge in new tools, 
-  frameworks and technologies overall is very limited, contrasted to the team in the new branch where the opposite is
+branch for them to be able to perform their work properly.
+  \item The differences in pace and knowledge between the team in the well established branch, where  
+  business knowledge is internalized and well understood by the employees, because the employees working in the old branch have an extensive amount of time working there. This is contrasted with their limited knowledge in new tools, 
+  frameworks and technologies overall. We can contrast this with the team in the new branch, where the opposite is
   presented, a team of young developers full of knowledge regarding the latest technologies and used to working at a 
   very high pace, but have no business knowledge for this particular company. 
   \item The team in the well established branch has a large set of BKP's (Best known practices and mechanisms), 
@@ -85,17 +90,97 @@ cultural context of the location of the new branch.
   why these are used. Trying to explain to a new set of young employees the rules that they have to follow but not
   knowing the main reason why they have to follow it, becomes really hard to understand both for the new employees
   as well for the older employees.
-  \item The employees in the new branch come with a vast set of new ideas that can be implemented in the company, but
-  there is a large resistance to change by the employees in the old branch.
+  \item The fact that the core business logic product, the concept of a "credit score", is not used or known in the 
+cultural context of the new branch.
+  \item Resistance to change by the employees in the old branch whose voice has more weight
+  because of seniority. This is contrasted with the employees in the new branch, who have a vast set of new ideas 
+  that can be implemented in the company, but also lack experience and knowledge regarding how the company works.
   
-  the fact that they have a bunch of best known practices that they already forgot why they do it 
 \end{itemize}
 
 
 
 
 \section{Contrast and Compare}
+Starting in 2010 and before joining the PhD program, I had formally worked for 4 different companies: Experian Credit 
+Score Reporting Services (Experian), The University of Costa Rica (UCR), Rutgers University The State University of New 
+Jersey (Rutgers), Intel Corporation (Intel). All of which 
+have a very different set of working environments and transmitted knowledge in very different ways. A recapitulation of
+these experiences is seen in Table~\ref{comparisonTable}, where it is entailed the time I worked for the company, the 
+size of the product I was working with (measured in lines of code), if the work was remote or in-office, the size of the 
+team I worked with, the number of sites the team was distributed in and the main programming language I worked with.
 
+It is particularly interesting to compare these different experience because of the diversity that they contribute
+to my experience in knowledge transfer.
+
+In The University of Costa Rica I worked as a Web Developer and then obtained a promotion to Webmaster. 
+This experience is different in several different ways. One of which is that the institutional knowledge 
+in this case was minimum.
+This was a research center with a small team of developers who would constantly get requirements to build small products 
+or implement changes to existing products, which would usually take between a month to six months to get built.
+
+The previous Webmaster was a single person who knew the high level details for most the products built and knew to a 
+large extent the knowledge necessary to perform properly as a Webmaster in this context.
+In this case, the knowledge transfer experience I had was about 3 hours with this previous Webmaster, who very kindly
+indicated to me the knowledge he though was necessary for me to perform well, while I asked him the questions I could 
+think of. The biggest limitation in this experience would be the time constraint. Since I had only one meeting with 
+this person and further on, if some other question to mind, or if I stumbled upon another problem, the knowledge
+transfer process would be over by then.
+
+I later came to realize that 3 hours of training was not quite enough for a position that I was going to hold for 4
+years. It quickly became a very challenging experience for me, mostly because most of the learning had to be done 
+by myself.
+
+The second experience I will talk about was when I worked for 9 months as a Web Developer in Rutgers University, The
+State University of New Jersey. This is one of the most interesting experiences to compare with because of the following 
+reason: the knowledge transfer experience I had was not having a knowledge transfer experience.
+
+I first was interviewed by the director of a recreational facility, a non computer science oriented person. He broadly 
+explained to me that I was going to 
+perform several changes to a program used by the recreational facility to perform some needed record keeping,
+test taking, etc. Once I started the job, the director gave me the password to the server and told me to 
+get myself familiarized with the program (a ~5,000 line PHP program). At this point I had to go through
+the program understanding what it was supposed to do, reading the comments, running it in different was, making small 
+changes to the 
+functionality and re-running it to confirm that I was properly understanding the functionality, and after a couple of 
+weeks of doing this I was able to understand generally how the program worked and how to perform the changes I was asked
+to implement.
+
+Finally, the third experience I will contrast is the experience I had at Intel Corporation, where I was hired
+as a Software Developer in February of 2012. In this opportunity, I joined a group of 3 people (myself included),
+two developers (located in Costa Rica) and one project manager (located in Arizona). Both branches, Costa Rica 
+and Arizona had existed for over 20 years and the working culture had been well assimilated and internalized
+at this point, which helped softened my immersion into the work environment.
+
+Probably the factor that made my transition more pleasant regarding transfer of knowledge, was the fact that 
+the other developer I was working with was, first of all, knowledgeable. He knew the technologies and processes
+very well, and was able to explain to me with as much detail as needed how to perform a task I was not familiar with. 
+Second of all, he was available. We worked in the same cubicle and when I needed further explanation of any given 
+task we would have the location proximity and he would have the kindness to take a couple of minutes of his time
+to explain some bullet to me. Also, since we were regular co-workers, knowledge transfer did not have a particular
+time limitation as opposed to my experience in the University of Costa Rica, so knowledge would flow in my
+direction in a very natural way. First when I was starting I would need a lot more, and later on less and less 
+until most of the knowledge I needed was assimilated, with the exception of very sporadical questions. 
+
+
+
+
+
+\begin{table}[] 
+\centering
+\caption{Comparison of knowledge transfer within 4 different experiences}
+\label{comparisonTable}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+                         & \textbf{Experian} & \textbf{UCR}   & \textbf{Rutgers} & \textbf{Intel} \\ \hline
+\textbf{Worked for}      & 1 year            & 4 years        & 9 months         & 1 year         \\ \hline
+\textbf{Size of product} & 1M+ loc           & small products & $\sim$5k loc     & $\sim$5k loc   \\ \hline
+\textbf{Work location}   & In-Office         & Remote         & Remote           & In-Office      \\ \hline
+\textbf{Team size}       & 7                 & 5              & 2                & 3              \\ \hline
+\textbf{Number of sites} & 3                 & 1              & 1                & 2              \\ \hline
+\textbf{Main language}   & Java              & Java           & Php              & C\#            \\ \hline
+\end{tabular}
+\end{table}
 
 \section{Reflection}
 
