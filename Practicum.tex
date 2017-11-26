@@ -1,5 +1,6 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 \usepackage[usenames,dvipsnames]{color}
 \newcommand{\todo}[1]
@@ -17,7 +18,14 @@
 \end{titlepage}
 
 \begin{abstract}
-I will write this later
+I analyze the knowledge transfer process I went through in my previous experiences in industrial environments.
+I contrast and compare the four different industrial experiences I had before joining the PhD program and 
+how knowledge transfer played an important role in my learning process for each of these companies.
+I discuss how the knowledge transfer process was handled in different ways in the different contexts I took part
+of and how the resources and mechanisms companies have to handle knowledge transfer have an impact in the 
+amount of time needed to be spent by both the newcomers and the mentors to understand the code base.
+
+ 
 \end{abstract}
  
  
@@ -76,8 +84,8 @@ Dagenais et al~\cite{Dagenais10} theorize there are three primary factors that i
 success newcomers have when facing a project landscape: early experimentation, internalizing structure
 and culture, and progress validation.
 
-The knowledge transfer process in an industrial context can take many forms. It can be, for example,
-face-to-face interactions between one or several apprentices and a mentor or in the form of documentation 
+The knowledge transfer process in an industrial context can take mainly two forms. It can be, for example,
+face-to-face interactions between one or several apprentices and a mentor, or it can take the form of documentation 
 (i.e. internal comments in the code, external documentation, educational videos, directives, etc). 
 
 For the 
@@ -184,13 +192,16 @@ by myself.
 The second experience I will talk about was when I worked for 9 months as a Web Developer in Rutgers University, The
 State University of New Jersey. This is a very interesting experiences to comtrast with because the knowledge 
 transfer experience I had was written, not verbal. The code was really well documented, but the person who had 
-written the comments was already gone. I had the advantage that I could 
+written the comments had already left the position. I had the advantage that I could go back and read the 
+documentation with as much detail and I wanted and whenever was most convenient for me, but in case I had a
+particular doubt about the process, I could not ask the developer in charged of this section why a certain
+architectural decision was taken or why was a trade off picked over the alternative.
 
 I first was interviewed by the director of a recreational facility, a non computer science oriented person. He broadly 
 explained to me that I was going to 
 perform several changes to a program used by the recreational facility to perform some needed record keeping,
 test taking, etc. Once I started the job, the director gave me the password to the server and told me to 
-get myself familiarized with the program (a ~5,000 line PHP program). At this point I had to go through
+get myself familiarized with the program (a 5,000 line PHP program). At this point I had to go through
 the program understanding what it was supposed to do, reading the comments, running it in different was, making small 
 changes to the 
 functionality and re-running it to confirm that I was properly understanding the functionality, and after a couple of 
@@ -235,7 +246,98 @@ until most of the knowledge I needed was assimilated, with the exception of very
 
 \section{Reflection}
 
+Looking back at the experiences I have had in the several different contexts I can say there are several
+key factors that make knowledge transfer in industrial environments a successful practice. As mentioned
+before, knowledge transfer can take the form of a two-way or a one-way communication, where the former
+usually takes the form of a face-to-face conversation, phone call or lecture, and the key characteristic
+of this kind of knowledge transfer mechanism is the fact that the newcomer may ask questions or express
+doubts about any section of the knowledge being transfer that is unclear and obtain
+answers from the mentor(s). The latter usually takes the form of documentation, which may be an external 
+documentation record, such as architectural diagrams, internal code documentation, explanatory videos or Q\&A's.
+
+In my experience a hybrid approach is the best and fastest way to get the newcomers to adapt and understand
+the new landscape of knowledge they are presented with. Not all the forms of documentation and face-to-face time
+are equally as important in an industrial environment.
+
+\subsection{One-way communication}
+Regarding documentation, what I have been able to observe is that proper internal documentation is the most 
+important of all the forms of documentation for new developers to understand the purpose of the code they will
+be working with and therefore need 
+to understand. This includes meaningful names for classes, methods and variables, clean code, and developer written
+comments every time were some piece of code requires further explanation.
+
+The importance of this particular kind of documentation comes from the fact that it is immediate.
+The newcomer will go through the code to try to understand it, and when the newcomer does not understand 
+a particular section of code, the first thing the newcomer will look for is the comments in the code
+that describe this section in particular, and if these comments address the doubts the newcomer had in this 
+section, the knowledge transfer will be immediate and effective.
+
+Unfortunately, in my experience, developer written comments are extremely rarely updated, which results in 
+comments that do not match what the code is currently doing, and therefore this leads to newcomers not 
+trusting the comments to understand what the code is doing because there is a discrepancy and a lack of 
+constance between what the developer written comments say the code does and what the code actually does. 
+Outdated documentation is in general a well known problem in software maintenance and this is a scenario
+where we can see in a very clear way the impact of this problem, since it interferes and hinders vastly the 
+knowledge transfer process and the learning experience of the newcomers.
+
+\subsection{Two-way communication}
+Regarding two-way communication between newcomers and mentors, in my experience, this is usually much less frequent and
+represents a much smaller section of the knowledge transfer process. One of the main reasons behind this being that
+senior developer's time is usually a highly valued asset which must be used in high priority tasks, and usually
+the knowledge transfer process does not qualify as a high priority tasks in industrial environments where
+projects have constant deadlines that require delivering important new products or fixing high priority errors
+within existing code. 
+
+Usually this kind of knowledge transfer is less necessary when the documentation in the project is of high
+quality and the newcomer can rely on this to obtain knowledge about the project (meaningful variable, class and 
+method names, constant update of developer comments, etc). But the lower quality the documentation has, the more
+it will be necessary for the mentor to explain the behavior of the code to the newcomer which can be described
+as an inversely proportional relationship between the quality of the documentation in the project and the 
+time needed to be spent by both the mentor and the newcomer for the newcomer to understand the behavior and
+purpose of the code. 
+
+Figure~\ref{graph1} represents this relationship between documentation quality and how much is learned by
+one-way or two-way communication. Projects in an industrial environment fall somewhere in between this spectrum 
+depicted by Figure~\ref{graph1}. In the far left we have projects with high quality documentation where the vast
+majority (or even all) the knowledge required by the newcomers to perform their tasks will come from the 
+documentation itself. On the far left, we have the opposite: projects with low quality documentation, where most 
+of the knowledge required by the newcomer will have to come from conversations with other developers since
+the knowledge that the newcomers can obtain from the documentation is minimum.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Graph1}
+    \caption{Percentage of one-way and two-way communication required for different types of projects with high and low quality documentation}
+    \label{graph1}
+\end{figure}
+
+
+
+
+
+
 \section{Conclusion}
+
+In my experience working with several different contexts of knowledge transfer in an industrial environment
+I can conclude that there are two major ways of transferring knowledge from mentors to newcomers: One-way
+and two-way communication. One-way communication is usually perceived in the form of documentation and it 
+is characterized by the fact that information flows in only one direction. From my point of view, the most 
+important of the several different kinds of documentation, is the internal documentation which encompasses
+names of classes, variables, methods and developer written comments. The importance of this comes from
+the immediateness of this kind of documentation to satisfy doubts the newcomers may have, and also because
+it is the most commonly used documentation by the newcomers. Two-way communication is needed in a inversely 
+proportional manner to the quality of said documentation.
+
+I can derive from this information that applying best practices from code maintenance literature such as 
+using meaningful names for classes, variables and methods in the project's code, and constantly updating
+the developer written comments is optimal for the knowledge transfer process in newcomers. Therefore making
+the need for two-way communication between newcomers and mentors minimal, which is also advantageous for the
+company since mentors tend to be more senior developers and the time that mentors spend mentoring newcomers
+is time they are not creating new products or fixing important errors which usually has a high priority
+in industrial environments.
+
+ 
 
 
 \bibliographystyle{abbrv}
